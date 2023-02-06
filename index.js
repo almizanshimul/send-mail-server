@@ -22,6 +22,7 @@ const nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
 app.post('/', (req, res) => {
   formSubmit(req)
+  res.send(true)
 })
 
 function formSubmit(req) {
@@ -44,6 +45,7 @@ function formSubmit(req) {
     console.log(`Response: ${info.response}`);
   }
 });
+
 }
 
 
